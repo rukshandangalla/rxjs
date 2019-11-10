@@ -1,0 +1,32 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Original</h1>
+    <h2 class="subtitle">
+      Original data without applying any <strong>RxJS</strong> Operators
+    </h2>
+    <table class="table is-fullwidth">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="products.length === 0">
+          <td colspan="3" align="center">
+            <i class="fas fa-cog fa-3x fa-spin"></i>
+          </td>
+        </tr>
+        <ng-container *ngIf="products.length > 0">
+          <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.location}}</td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+
+  </div>
+</section>
